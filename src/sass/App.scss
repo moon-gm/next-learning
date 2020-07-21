@@ -1,0 +1,14 @@
+/** Sass管理設定 **/
+
+// リセット設定
+@import 'reset';
+// 変数設定
+@import 'variable';
+// 初期設定
+@import 'init';
+// レイアウト設定
+@import 'layout';
+// 共通設定
+@import 'common';
+
+// パーツ設定（.module.scssはコンポーネントに直接使用）
