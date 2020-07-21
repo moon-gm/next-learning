@@ -9,10 +9,10 @@
 		width: 35%;
 		height: 100%;
 		padding: 20px;
+		color: $white;
 		background: $dark-grey-skelton;
 		backdrop-filter: blur(10px);
-		color: $light-blue;
-		border-left: 1px solid $light-blue;
+		border-left: 1px solid $black;
 		z-index: $z-index-aside;
 		@media screen and (max-width: $sp-max-width) {
 			width: 100%;
@@ -34,14 +34,15 @@
 			right: 0;
 			margin: auto;
 			padding: 0 20px;
-			background: $dark-grey;
-			color: $light-blue;
+			color: $white;
+			background: $black;
 			width: 100%;
 			height: $header-height;
-			border-bottom: 1px solid $light-blue;
+			border-bottom: 1px solid $white;
 			z-index: $z-index-header;
 			@media screen and (max-width: $sp-max-width) {
 				padding: 0;
+				padding-left: 10px;
 			}
 
 		}

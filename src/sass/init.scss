@@ -10,8 +10,8 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	line-height: 1.5;
 	font-size: 15px;
-	color: $white;
-	background: $dark-grey;
+	color: $black;
+	background: $white;
 	max-width: $screen-max-width;
 	min-width: $screen-min-width;
 	margin: 0 auto;
@@ -19,9 +19,10 @@ body {
 
 a {
 	text-decoration: none;
-	color: $light-blue;
+	color: $blue;
 	&:hover {
-		background: $white-skelton;
+		color: $white;
+		background: $dark-grey-skelton;
 		padding: 0 5px;
 	}
 }

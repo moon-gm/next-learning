@@ -32,14 +32,13 @@
 	.page-layout {
 		width: 100%;
 		height: 100%;
-		background: $dark-grey;
+		background: $white;
 		padding: 20px;
 
 		// 見出し１
 		.h1 {
 			font-size: 30px;
-			color: $white;
-			// border-bottom: 2px solid $white;
+			color: $black;
 			margin-bottom: $m-bottom;
 			@media screen and (max-width: $sp-max-width) {
 				font-size: 20px;
@@ -49,10 +48,15 @@
 		// 見出し２
 		.h2 {
 			font-size: 25px;
-			color: $light-blue;
-			border-bottom: 3px solid $light-blue;
+			color: $white;
 			margin: 0 20px $m-bottom;
+			padding: 0 10px;
 			padding-bottom: 3px;
+			color: $white-skelton;
+			background: $black;
+			text-shadow: 1px 1px 1px $white, -1px -1px 15px $white;
+			box-shadow: 1px 1px 5px $black, -1px -1px 5px $black;
+			border-radius: 4px;
 			@media screen and (max-width: $sp-max-width) {
 				font-size: 20px;
 				margin: 0 0 $m-bottom;
@@ -63,6 +67,7 @@
 		.h3 {
 			font-size: 20px;
 			margin: 0 20px $m-bottom;
+			border-bottom: 3px solid $black;
 			@media screen and (max-width: $sp-max-width) {
 				font-size: 20px;
 				margin: 0 0 $m-bottom;
@@ -88,7 +93,7 @@
 				width: 100%;
 				height: auto;
 				max-width: $sp-max-width;
-				border: 1px solid $white;
+				border: 1px solid $black;
 				@media screen and (max-width: $sp-max-width) {
 					max-width: 300px;
 				}
@@ -112,13 +117,13 @@
 			}
 
 			th {
-				color: $light-blue;
-				border-bottom: 2px solid $light-blue;
+				color: $black;
+				border-bottom: 2px solid $black;
 				text-align: left;
 			}
 			td {
-				color: $white;
-				border-bottom: 1px dotted $white;
+				color: $black;
+				border-bottom: 1px dotted $black;
 				&::before {
 					content: "-";
 					padding-right: 0.5em;
@@ -135,9 +140,9 @@
 
 		// ページジャンプリンク
 		.page-jump {
-			color: $light-blue;
+			color: $blue;
 			&:hover {
-				background: $white-skelton;
+				background: $dark-grey-skelton;
 				padding: 0 5px;
 			}
 		}
@@ -165,8 +170,8 @@
 
 		// コマンド挿入
 		.command {
-			background: $white-skelton;
-			color: $dark-grey;
+			background: $dark-grey-skelton;
+			color: $white;
 			font-weight: bold;
 			padding: 2px 5px;
 			border-radius: 4px;

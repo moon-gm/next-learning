@@ -1,5 +1,6 @@
 // サイドメニューの子リストの表示処理
 import React from 'react';
+import Link from 'next/link';
 
 const LittleList = ({listNeeds}) => {
 	// 子リスト
@@ -9,9 +10,13 @@ const LittleList = ({listNeeds}) => {
 			onClick={listNeeds.func}
 			id={listNeeds.state.page}
 		>
-			<span className={listNeeds.sideListText}>
-				{listNeeds.name}
-			</span>
+			<Link
+				href={listNeeds.link}
+			>
+				<span className={listNeeds.sideListText}>
+					{listNeeds.name}
+				</span>
+			</Link>
 		</li>
 	);
 }
