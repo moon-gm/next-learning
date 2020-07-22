@@ -1,6 +1,3 @@
-// react-syntax-highlighterのstyleをインポート
-import { dark, coy, funky, okaidia, solarizedlight, tomorrow, twilight, prism, atomDark, base16AteliersulphurpoolLight, cb, darcula, duotoneDark, duotoneEarth, duotoneForest, duotoneLight, duotoneSea, duotoneSpace, ghcolors, hopscotch, pojoaque, vs, xonokai} from 'react-syntax-highlighter/dist/esm/styles/prism';
-
 // ハイライトするコードの設定
 export default {
 	pages: {
@@ -32,30 +29,5 @@ export default {
 		sass: "sass",
 		json: "json",
 		unset: "unset",
-	},
-	styles: {
-		"dark": dark,
-		"coy": coy,
-		"funky": funky,
-		"okaidia": okaidia,
-		"solarizedlight": solarizedlight,
-		"tomorrow": tomorrow,
-		"twilight": twilight,
-		"prism": prism,
-		"atomDark": atomDark,
-		"base16AteliersulphurpoolLight": base16AteliersulphurpoolLight,
-		"cb": cb,
-		"darcula": darcula,
-		"duotoneDark": duotoneDark,
-		"duotoneEarth": duotoneEarth,
-		"duotoneForest": duotoneForest,
-		"duotoneLight": duotoneLight,
-		"duotoneSea": duotoneSea,
-		"duotoneSpace": duotoneSpace,
-		"ghcolors": ghcolors,
-		"hopscotch": hopscotch,
-		"pojoaque": pojoaque,
-		"vs": vs,
-		"xonokai": xonokai,
 	}
 }

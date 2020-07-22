@@ -1,6 +1,7 @@
 import React from 'react';
 import SEO from './../../parts/SEO'
 import urls from './../../config/outerUrls'
+import codes from './../../config/codes'
 import Parts from './../../config/parts'
 
 const Environment = ({allData}) => {
@@ -90,7 +91,10 @@ const Environment = ({allData}) => {
 					<p className="p">
 						上記コマンド入力し、ルートディレクトリ の「next.config.js」に以下のコードを設定することで使用可能となる
 					</p>
-					{/* ここにcode1 */}
+					<Parts.CodeHighlighter
+						language={codes.languages.jsx}
+						codeString={codes.pages.Page1.Section1.code1}
+					/>
 
 				<h2 className="h2">
 					6. サーバにデプロイ
@@ -117,7 +121,10 @@ const Environment = ({allData}) => {
 						<p className="p">
 							コマンドがない場合は、「package.json」に以下のコードを追加することで、実行できるようになる
 						</p>
-						{/* ここにcode2 */}
+						<Parts.CodeHighlighter
+							language={codes.languages.jsx}
+							codeString={codes.pages.Page1.Section1.code2}
+						/>
 
 					<h3 className="h3">
 						6-2. ローカルで確認
