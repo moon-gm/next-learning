@@ -1,6 +1,7 @@
 import React from 'react';
 import Styles from './../sass/parts/aside.module.scss';
 import Router from './../config/routes';
+import Link from 'next/link';
 
 const Aside = ({allData, states}) => {
 
@@ -22,9 +23,13 @@ const Aside = ({allData, states}) => {
 									id={pageData.state.page}
 									key={`key${pageData.state.page}`}
 								>
-									<span className={Styles.sideListText}>
-										{pageData.name}
-									</span>
+									<Link
+										href={pageData.path}
+									>
+										<span className={Styles.sideListText}>
+											{pageData.name}
+										</span>
+									</Link>
 								</li>
 							);
 						}

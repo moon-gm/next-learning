@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head'
 
 // 各種コンポーネント取得
-import Router from './config/routes'
 import Parts from './config/parts';
 
 // 各種設定値取得
@@ -30,7 +29,6 @@ class Layout extends React.Component {
 			{
 				"Top": Functions.Page.bind(this, States.page.Top),
 				"Menu": Functions.Menu.bind(this),
-				"Back": Functions.Back.bind(this),
 			},
 			{
 				"Page1": {
