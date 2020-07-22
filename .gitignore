@@ -33,6 +33,3 @@ yarn-error.log*
 yarn.lock
 package-lock.json
 
-# export
-docs/_next/static/development
-docs/_next/static/webpack
