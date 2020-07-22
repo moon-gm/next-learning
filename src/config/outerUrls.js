@@ -13,6 +13,14 @@ export default {
 	// Next Official Page
 	NextOfficial: {
 		Top: "https://nextjs.org/",
+		Deploy: "https://vercel.com/docs/v2/platform/deployments",
+	},
+
+	// 自作サイト
+	MySite: {
+		ReactLearning: "https://moon-gm.github.io/react-learning/",
+		NextLearning: "https://next-learning-teal.vercel.app/",
+		GatsbyLearning: "https://gatsby-learning-teal.vercel.app/",
 	},
 
 	// 外部参考サイト
