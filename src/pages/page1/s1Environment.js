@@ -1,14 +1,10 @@
 import React from 'react';
-import Layout from './../../layout'
+import SEO from './../../parts/SEO'
 
-const Environment = ({state, allData, funcs}) => {
+const Environment = ({allData}) => {
 	return (
-		<Layout
-			allData={allData}
-			state={state}
-			funcs={funcs}
-			pageName={allData[1].children[0].name}
-		>
+		<>
+			<SEO pageName={allData[1].children[0].name} />
 			<div className="page-layout">
 
 				<h2 className="h2">
@@ -132,7 +128,7 @@ const Environment = ({state, allData, funcs}) => {
 						</p>
 
 			</div>
-		</Layout>
+		</>
 	);
 }
 

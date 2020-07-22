@@ -1,14 +1,10 @@
 import React from 'react';
-import Layout from './../../layout'
+import SEO from './../../parts/SEO'
 
-const AboutEnv = ({state, allData, funcs}) => {
+const AboutEnv = ({allData}) => {
 	return (
-		<Layout
-			allData={allData}
-			state={state}
-			funcs={funcs}
-			pageName={allData[1].children[2].name}
-		>
+		<>
+			<SEO pageName={allData[1].children[2].name} />
 			<div className="page-layout">
 
 				<h2 className="h2">
@@ -52,8 +48,7 @@ const AboutEnv = ({state, allData, funcs}) => {
 					</p>
 
 			</div>
-		</Layout>
+		</>
 	);
 }
-
 export default AboutEnv;

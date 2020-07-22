@@ -1,53 +1,26 @@
-import Layout from './../layout'
+import SEO from './../parts/SEO'
+import Styles from './../sass/pages/index.module.scss'
+import Parts from './../config/parts';
+import urls from './../config/outerUrls';
 
-export default function Home({state, allData, funcs}) {
+export default function Home({allData}) {
   return (
-	<Layout
-		allData={allData}
-		state={state}
-		funcs={funcs}
-		pageName="Home"
-	>
-		<div className="page-layout">
-			<h1 className="h1">
-			Welcome to <a href="https://nextjs.org">Next.js!</a>
-			</h1>
-
-			<p className="h2">
-			Get started by editing <code>pages/index.js</code>
-			</p>
-			<p className="h3">
-			Get started by editing <code>pages/index.js</code>
-			</p>
-
-			<div className="p">
-			<a href="https://nextjs.org/docs">
-				<h3>Documentation &rarr;</h3>
-				<p>Find in-depth information about Next.js features and API.</p>
-			</a>
-
-			<a href="https://nextjs.org/learn">
-				<h3>Learn &rarr;</h3>
-				<p>Learn about Next.js in an interactive course with quizzes!</p>
-			</a>
-
-			<a
-				href="https://github.com/vercel/next.js/tree/master/examples"
-			>
-				<h3>Examples &rarr;</h3>
-				<p>Discover and deploy boilerplate example Next.js projects.</p>
-			</a>
-
-			<a
-				href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-			>
-				<h3>Deploy &rarr;</h3>
-				<p>
-				Instantly deploy your Next.js site to a public URL with Vercel.
-				</p>
-			</a>
+	<>
+		<SEO pageName="Home" />
+		<div className={Styles.AppHeader}>
+			<div className={Styles.mainTitle}>
+				{allData[0].name}
 			</div>
+			<img
+				src="/nextjs.svg"
+				className={Styles.AppLogo}
+				alt="logo"
+			/>
+			<Parts.OuterLink
+				url={urls.NextOfficial.Top}
+				linkText="> Go to Official"
+			/>
 		</div>
-	</Layout>
+	</>
   )
 }

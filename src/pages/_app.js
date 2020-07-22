@@ -1,12 +1,15 @@
-import React from 'react';
+// Global-CSS設定
 import './../sass/App.scss'
+
+// 各種コンポーネント取得
+import Parts from './../config/parts';
 
 // 各種設定値取得
 import AllData from './../config/allData';
 import Functions from './../config/functions';
 import States from './../config/states';
 
-class DataSetting extends React.Component {
+class Layout extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -47,17 +50,40 @@ class DataSetting extends React.Component {
 		/***** childrenの設定 *****/
 		// childrenに渡すPropsの設定
 		const additionalProps = {
-			allData: this.allData,
-			state: this.state,
-			funcs: this.funcs
+			allData: this.allData
 		}
 		// 子要素を再生成してPropsを渡す設定
 		const newChildren = React.cloneElement(this.props.children, additionalProps);
 
 		return (
-			<>
-				{newChildren}
-			</>
+			<div className="flex-box">
+
+				{/* サイドエリア */}
+				{this.state.menu === States.menu.show && (
+					<Parts.Aside
+						allData={this.allData}
+						states={this.state}
+					/>
+				)}
+
+				{/* コンテンツエリア */}
+				<div className="contents">
+
+					{/* ヘッダーエリア */}
+					<Parts.Header
+						allData={this.allData}
+						states={this.state}
+						funcs={this.funcs}
+					/>
+
+					{/* メインエリア */}
+					<main className="main">
+						{newChildren}
+					</main>
+
+				</div>
+
+			</div>
 		);
 	}
 
@@ -65,10 +91,10 @@ class DataSetting extends React.Component {
 
 export default function App({ Component, pageProps }) {
     return (
-		<DataSetting>
+		<Layout>
 			<Component
 				{...pageProps}
 			/>
-		</DataSetting>
+		</Layout>
 	);
   }
