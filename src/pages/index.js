@@ -1,8 +1,13 @@
 import Layout from './../layout'
 
-export default function Home() {
+export default function Home({state, allData, funcs}) {
   return (
-	<Layout>
+	<Layout
+		allData={allData}
+		state={state}
+		funcs={funcs}
+		pageName="Home"
+	>
 		<div className="page-layout">
 			<h1 className="h1">
 			Welcome to <a href="https://nextjs.org">Next.js!</a>

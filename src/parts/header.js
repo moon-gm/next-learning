@@ -1,7 +1,7 @@
 import React from 'react';
 import Styles from './../sass/parts/header.module.scss';
 
-const Header = ({func, states, allData}) => {
+const Header = ({funcs, states, allData}) => {
 
 	return (
 		<header className="header">
@@ -56,7 +56,7 @@ const Header = ({func, states, allData}) => {
 						states.menu === "show" && (
 							<li
 								className={Styles.menuBtnPC}
-								onClick={func[0].Menu}
+								onClick={funcs[0].Menu}
 								id="menuBtnPC"
 								disabled
 							>
@@ -68,7 +68,7 @@ const Header = ({func, states, allData}) => {
 						states.menu === "hide" && (
 							<li
 								className={Styles.menuBtnPC}
-								onClick={func[0].Menu}
+								onClick={funcs[0].Menu}
 								id="menuBtnPC"
 							>
 								Open Menu ▼
@@ -81,7 +81,7 @@ const Header = ({func, states, allData}) => {
 					<li
 						className={Styles.menuBtnSP}
 						id="menuBtnSP"
-						onClick={func[0].Menu}
+						onClick={funcs[0].Menu}
 					>
 						≡
 					</li>

@@ -1,16 +1,21 @@
 import React from 'react';
 import Layout from './../../layout'
 
-const Environment = ({title, alldata}) => {
+const Environment = ({state, allData, funcs}) => {
 	return (
-		<Layout>
+		<Layout
+			allData={allData}
+			state={state}
+			funcs={funcs}
+			pageName={allData[1].children[0].name}
+		>
 			<div className="page-layout">
 
 				<h2 className="h2">
 					1. create-react-appをインストール
 				</h2>
 					<p className="p">
-						{console.log(alldata)}
+						{console.log(allData)}
 						以下をターミナルに入力してインストール
 					</p>
 					<p className="p">

@@ -4,88 +4,47 @@ import Head from 'next/head'
 // 各種コンポーネント取得
 import Parts from './config/parts';
 
-// 各種設定値取得
-import AllData from './config/allData';
-import Functions from './config/functions';
+// State設定値取得
 import States from './config/states';
 
-class Layout extends React.Component {
+const Layout = ({allData, state, funcs, children, pageName}) => {
+	return (
+		<>
+			{/* SEO設定 */}
+			<Head>
+				<title>Next Learning | {pageName}</title>
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
 
-	constructor(props) {
-		super(props);
+			<div className="flex-box">
 
-		/***** state初期値設定 *****/
-		this.state = {
-			// ページ表示設定
-			page: States.page.Top,
-			 // サイドエリア表示設定
-			menu: States.menu.hide,
-			// サイドエリアの子リスト表示
-			list: States.list.hide,
-		}
+				{/* サイドエリア */}
+				{state.menu === States.menu.show && (
+					<Parts.Aside
+						allData={allData}
+						states={state}
+					/>
+				)}
 
-		/***** functionの初期値設定 *****/
-		this.funcs = [
-			{
-				"Top": Functions.Page.bind(this, States.page.Top),
-				"Menu": Functions.Menu.bind(this),
-			},
-			{
-				"Page1": {
-					"L1": Functions.List.bind(this, States.list.list1),
-					"S1": Functions.PageSection.bind(this, States.page.Page1.S1),
-					"S2": Functions.PageSection.bind(this, States.page.Page1.S2),
-					"S3": Functions.PageSection.bind(this, States.page.Page1.S3),
-				},
-			},
+				{/* コンテンツエリア */}
+				<div className="contents">
 
-		];
+					{/* ヘッダーエリア */}
+					<Parts.Header
+						allData={allData}
+						states={state}
+						funcs={funcs}
+					/>
 
-		/***** ページデータ設定 *****/
-		this.allData = AllData(this.funcs);
+					{/* メインエリア */}
+					<main className="main">
+						{children}
+					</main>
 
-	}
-
-	render() {
-		const additionalProps = {alldata: this.allData}
-		const newChildren = React.cloneElement(this.props.children, additionalProps);
-		return (
-			<>
-				<Head>
-					<title>Create Next App</title>
-					<link rel="icon" href="/favicon.ico" />
-				</Head>
-				<div className="flex-box">
-
-					{/* サイドエリア */}
-					{this.state.menu === States.menu.show && (
-						<Parts.Aside
-							allData={this.allData}
-							states ={this.state}
-						/>
-					)}
-
-					{/* コンテンツエリア */}
-					<div className="contents">
-
-						{/* ヘッダーエリア */}
-						<Parts.Header
-							allData={this.allData}
-							states={this.state}
-							func={this.funcs}
-						/>
-
-						{/* メインエリア */}
-						<main className="main">
-							{newChildren}
-						</main>
-
-					</div>
 				</div>
-			</>
-		);
-	}
-
+			</div>
+		</>
+	);
 }
 
 export default Layout;

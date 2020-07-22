@@ -1,9 +1,14 @@
 import React from 'react';
 import Layout from './../../layout'
 
-const AboutEnv = ({title}) => {
+const AboutEnv = ({state, allData, funcs}) => {
 	return (
-		<Layout>
+		<Layout
+			allData={allData}
+			state={state}
+			funcs={funcs}
+			pageName={allData[1].children[2].name}
+		>
 			<div className="page-layout">
 
 				<h2 className="h2">
