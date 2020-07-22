@@ -20,7 +20,7 @@ export default {
 	MySite: {
 		ReactLearning: "https://moon-gm.github.io/react-learning/",
 		NextLearning: "https://next-learning-teal.vercel.app/",
-		GatsbyLearning: "https://gatsby-learning-teal.vercel.app/",
+		GatsbyLearning: "https://gatsby-learning-bay.vercel.app/",
 	},
 
 	// 外部参考サイト
