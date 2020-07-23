@@ -37,6 +37,9 @@
 	position: relative;
 	top: 6px;
 	left: 0px;
+	@media screen and (max-width: $sp-max-width){
+		top: 7.5px;
+	}
 	.logo {
 		width: 100%;
 		height: auto;
