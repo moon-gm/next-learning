@@ -8,7 +8,7 @@ const SEO = ({pageName}) => {
 			{/* SEO設定 */}
 			<Head>
 				<title>{pageName} | {pages.Top.Name}</title>
-				<link rel="icon" href="/favicon.ico" />
+				<link rel="icon" href="/nextjs.svg" />
 			</Head>
 		</>
 	);
