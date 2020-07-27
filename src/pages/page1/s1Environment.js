@@ -10,11 +10,13 @@ const Environment = ({allData}) => {
 			<SEO pageName={allData[1].children[0].name} />
 			<div className="page-layout">
 
+				<p className="p">
+					Next.jsとはVercel社（旧Zeit社）が開発したReactフレームワークである。サーバーサイドとの連携もできるため、DBを利用したりと汎用性が高い。よくVueのNuxt.jsと比較される。
+				</p>
 				<h2 className="h2">
 					1. create-next-appをインストール
 				</h2>
 					<p className="p">
-						{console.log(allData)}
 						以下をターミナルに入力してインストール
 					</p>
 					<p className="p">

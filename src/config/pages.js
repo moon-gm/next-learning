@@ -5,6 +5,9 @@ import Top from '../pages/index';
 import Environment from '../pages/page1/s1Environment';
 import EnvironmentM from '../pages/page1/s2EnvironmentManual';
 import AboutEnv from '../pages/page1/s3AboutEnv';
+// Page2
+import DirCheck from '../pages/page2/s1DirConst';
+import FileConst from '../pages/page2/s2FileConst';
 // Maintenance page
 import Maintenance from '../pages/index';
 
@@ -33,6 +36,20 @@ export default {
 			Name: "1-3. Envの設定",
 			Path: "/page1/s3AboutEnv",
 			AboutEnv: AboutEnv,
+		},
+	},
+	// 2. プロジェクト構成
+	Page2: {
+		Name: "2. プロジェクト構成",
+		Section1: {
+			Name: "2-1. ディレクトリ構成",
+			Path: "/page2/s1DirConst",
+			DirCheck: DirCheck,
+		},
+		Section2: {
+			Name: "2-2. ファイル構成",
+			Path: "/page2/s2FileConst",
+			FileConst: FileConst,
 		},
 	},
 };

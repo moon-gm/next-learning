@@ -14,6 +14,8 @@ export default {
 	NextOfficial: {
 		Top: "https://nextjs.org/",
 		Deploy: "https://vercel.com/docs/v2/platform/deployments",
+		Config: "https://nextjs.org/docs/api-reference/next.config.js/introduction",
+		Phase: "https://github.com/vercel/next.js/blob/canary/packages/next/next-server/lib/constants.ts#L1-L4",
 	},
 
 	// 自作サイト
@@ -32,6 +34,7 @@ export default {
 	Gatsby: "https://qiita.com/hppRC/items/00739eaf9ae7fc95c1ca",
 	GatsbyOfficial: "https://www.gatsbyjs.org/",
 	Next: "https://qiita.com/tetsutaroendo/items/0dad3150ecb4c9ad0d54",
+	AppDocument: "https://qiita.com/tetsutaroendo/items/c7171286137d963cdecf",
 
 	// npm公式サイト
 	npm: {
